@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="{{url_for('static', filename='signupstyle.css')}}"></link>
+</head>
+<body>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+<div class="testbox">
+  <h1>Registration</h1>
+
+  <form action="/signup" method="post">
+  	<label id="icon" for="name"><i class="icon-user "></i></label>
+  		<input type="text" name="first_name"placeholder="First name" required/>
+  	<label id="icon" for="name"><i class="icon-user"></i></label>
+  		<input type="text" name="last_name" placeholder="Last name" required/>
+  	<label id="icon" for="name"><i class="icon-envelope "></i></label>
+  		<input type="text" name="email" placeholder="Email" required/>
+  	<label id="icon" for="name"><i class="icon-user"></i></label>
+  		<input type="text" name="username" placeholder="User Name" required/>
+  	<label id="icon" for="name"><i class="icon-shield"></i></label>
+  		<input type="password" name="password"placeholder="Password" required/>
+  	<input type="submit" name="submit">
+  </form>
+</div>
+</body>
+</html>
+

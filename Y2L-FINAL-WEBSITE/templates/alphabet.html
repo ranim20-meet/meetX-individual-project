@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alphabet</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='alphabet.css')}}">
+</head>
+
+<body>
+	<div class="container top">
+	<h1 style="margin: 5px;">Hello, {{user.first_name}}!</h1>
+	<h3 style="margin: 5px;">Let's practice the letters!</h3>
+	<h3 style="margin: 5px;">Hover over a card to see the sign. How many can you remember?</h3>
+	</div>
+	<div class = "container">
+	{% for l in letters%}
+		<div class="flip-card">
+		 	<div class="flip-card-inner">
+		   		<div class="flip-card-front">
+		     		<h1>{{l.upper()}}</h1>
+		    	</div>
+		    	<div class="flip-card-back">
+		    		<img src="/static/images/CROPPED/{{l}}.jpg" alt="Letter {{l}}" style="height:100%;">
+		    	</div>
+		 	</div>
+		</div>
+	{% endfor %}
+	</div>
+	<a href="{{url_for('test')}}">Let's test!</a>
+</body>
+
+</html>

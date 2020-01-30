@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'signupstyle.css')}}">
+</head>
+<body>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+	<div class="testbox">
+
+		<form action="/user_login" method="POST">
+			<label id="icon" for="name"><i class="icon-user "></i></label>
+	  			<input type="text" name="username_inp"placeholder="Username" required/>
+	  		<label id="icon" for="name"><i class="icon-shield"></i></label>
+	  			<input type="text" name="password_inp" placeholder="Password" required/>
+			<input type="submit" name="submit" value = "submit" id = "submit_form">
+		</form>
+		Don't have an acount? <a href="{{url_for('signup')}}">Sign up!</a>
+	</div>
+</body>
+</html>
+
